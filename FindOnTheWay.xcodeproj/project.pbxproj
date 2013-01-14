@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27AAB9AC16A1E793009AC694 /* GoogleDirectionsConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */; };
+		27AAB9B016A1FDB3009AC694 /* GoogleRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */; };
+		27AAB9B216A20457009AC694 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AAB9B116A20457009AC694 /* MapKit.framework */; };
+		27AAB9B516A20743009AC694 /* RouteMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9B416A20743009AC694 /* RouteMapViewController.m */; };
+		27BBB63D16A0621E00EA5373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63C16A0621E00EA5373 /* UIKit.framework */; };
+		27BBB63F16A0621E00EA5373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63E16A0621E00EA5373 /* Foundation.framework */; };
+		27BBB64116A0621E00EA5373 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB64016A0621E00EA5373 /* CoreGraphics.framework */; };
+		27BBB64716A0621E00EA5373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB64516A0621E00EA5373 /* InfoPlist.strings */; };
+		27BBB64916A0621E00EA5373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB64816A0621E00EA5373 /* main.m */; };
+		27BBB64D16A0621E00EA5373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB64C16A0621E00EA5373 /* AppDelegate.m */; };
+		27BBB64F16A0621E00EA5373 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB64E16A0621E00EA5373 /* Default.png */; };
+		27BBB65116A0621E00EA5373 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB65016A0621E00EA5373 /* Default@2x.png */; };
+		27BBB65316A0621E00EA5373 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB65216A0621E00EA5373 /* Default-568h@2x.png */; };
+		27BBB65616A0621E00EA5373 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB65416A0621E00EA5373 /* MainStoryboard.storyboard */; };
+		27BBB66116A0621E00EA5373 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB66016A0621E00EA5373 /* SenTestingKit.framework */; };
+		27BBB66216A0621E00EA5373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63C16A0621E00EA5373 /* UIKit.framework */; };
+		27BBB66316A0621E00EA5373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63E16A0621E00EA5373 /* Foundation.framework */; };
+		27BBB66B16A0621E00EA5373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB66916A0621E00EA5373 /* InfoPlist.strings */; };
+		27BBB67916A0623C00EA5373 /* GoogleRouteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */; };
+		27BBB69D16A0871200EA5373 /* OnTheWayTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */; };
+		27BBB6A116A0955600EA5373 /* RouteOptimizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */; };
+		27BBB6A416A0956400EA5373 /* RouteOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6A316A0956400EA5373 /* RouteOptimizer.m */; };
+		27BBB6B316A0A29100EA5373 /* RouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6B216A0A29100EA5373 /* RouteStep.m */; };
+		27BBB6B416A0A29100EA5373 /* RouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6B216A0A29100EA5373 /* RouteStep.m */; };
+		27BBB6CA16A0A79300EA5373 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB6C916A0A79300EA5373 /* CoreLocation.framework */; };
+		27BBB6CE16A0A89600EA5373 /* RoutePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6CD16A0A89600EA5373 /* RoutePoint.m */; };
+		27BBB6D116A0EFF800EA5373 /* RouteInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */; };
+		56E44D67AED7C81D5E7D5A90 /* brooklyn_to_forest_hill.json in Resources */ = {isa = PBXBuildFile; fileRef = 56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */; };
+		56E44EE8828EB521EB54A844 /* brooklyn_to_forest_hill.json in Resources */ = {isa = PBXBuildFile; fileRef = 56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27BBB66416A0621E00EA5373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27BBB62F16A0621D00EA5373 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27BBB63716A0621E00EA5373;
+			remoteInfo = FindOnTheWay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsConnection.h; sourceTree = "<group>"; };
+		27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsConnection.m; sourceTree = "<group>"; };
+		27AAB9AE16A1FDB3009AC694 /* GoogleRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleRoute.h; sourceTree = "<group>"; };
+		27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleRoute.m; sourceTree = "<group>"; };
+		27AAB9B116A20457009AC694 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27AAB9B316A20743009AC694 /* RouteMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteMapViewController.h; sourceTree = "<group>"; };
+		27AAB9B416A20743009AC694 /* RouteMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteMapViewController.m; sourceTree = "<group>"; };
+		27BBB63816A0621E00EA5373 /* FindOnTheWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindOnTheWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BBB63C16A0621E00EA5373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27BBB63E16A0621E00EA5373 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27BBB64016A0621E00EA5373 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27BBB64416A0621E00EA5373 /* FindOnTheWay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindOnTheWay-Info.plist"; sourceTree = "<group>"; };
+		27BBB64616A0621E00EA5373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27BBB64816A0621E00EA5373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27BBB64A16A0621E00EA5373 /* FindOnTheWay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FindOnTheWay-Prefix.pch"; sourceTree = "<group>"; };
+		27BBB64B16A0621E00EA5373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27BBB64C16A0621E00EA5373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27BBB64E16A0621E00EA5373 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		27BBB65016A0621E00EA5373 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		27BBB65216A0621E00EA5373 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		27BBB65516A0621E00EA5373 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		27BBB65F16A0621E00EA5373 /* FindOnTheWayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindOnTheWayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BBB66016A0621E00EA5373 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		27BBB66816A0621E00EA5373 /* FindOnTheWayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindOnTheWayTests-Info.plist"; sourceTree = "<group>"; };
+		27BBB66A16A0621E00EA5373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27BBB67716A0623C00EA5373 /* GoogleRouteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleRouteTest.h; sourceTree = "<group>"; };
+		27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleRouteTest.m; sourceTree = "<group>"; };
+		27BBB69B16A0871200EA5373 /* OnTheWayTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnTheWayTestCase.h; sourceTree = "<group>"; };
+		27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnTheWayTestCase.m; sourceTree = "<group>"; };
+		27BBB69F16A0955600EA5373 /* RouteOptimizerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteOptimizerTest.h; sourceTree = "<group>"; };
+		27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteOptimizerTest.m; sourceTree = "<group>"; };
+		27BBB6A216A0956400EA5373 /* RouteOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteOptimizer.h; sourceTree = "<group>"; };
+		27BBB6A316A0956400EA5373 /* RouteOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteOptimizer.m; sourceTree = "<group>"; };
+		27BBB6B116A0A29100EA5373 /* RouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteStep.h; sourceTree = "<group>"; };
+		27BBB6B216A0A29100EA5373 /* RouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteStep.m; sourceTree = "<group>"; };
+		27BBB6C916A0A79300EA5373 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27BBB6CC16A0A89600EA5373 /* RoutePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePoint.h; sourceTree = "<group>"; };
+		27BBB6CD16A0A89600EA5373 /* RoutePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePoint.m; sourceTree = "<group>"; };
+		27BBB6CF16A0EFF800EA5373 /* RouteInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteInputViewController.h; sourceTree = "<group>"; };
+		27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteInputViewController.m; sourceTree = "<group>"; };
+		56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = brooklyn_to_forest_hill.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27BBB63516A0621E00EA5373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27AAB9B216A20457009AC694 /* MapKit.framework in Frameworks */,
+				27BBB6CA16A0A79300EA5373 /* CoreLocation.framework in Frameworks */,
+				27BBB63D16A0621E00EA5373 /* UIKit.framework in Frameworks */,
+				27BBB63F16A0621E00EA5373 /* Foundation.framework in Frameworks */,
+				27BBB64116A0621E00EA5373 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BBB65B16A0621E00EA5373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BBB66116A0621E00EA5373 /* SenTestingKit.framework in Frameworks */,
+				27BBB66216A0621E00EA5373 /* UIKit.framework in Frameworks */,
+				27BBB66316A0621E00EA5373 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27AAB9B616A2074A009AC694 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB6CF16A0EFF800EA5373 /* RouteInputViewController.h */,
+				27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */,
+				27AAB9B316A20743009AC694 /* RouteMapViewController.h */,
+				27AAB9B416A20743009AC694 /* RouteMapViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27AAB9B716A20762009AC694 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27AAB9AE16A1FDB3009AC694 /* GoogleRoute.h */,
+				27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */,
+				27BBB6B116A0A29100EA5373 /* RouteStep.h */,
+				27BBB6B216A0A29100EA5373 /* RouteStep.m */,
+				27BBB6CC16A0A89600EA5373 /* RoutePoint.h */,
+				27BBB6CD16A0A89600EA5373 /* RoutePoint.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		27AAB9B816A2077F009AC694 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB6A216A0956400EA5373 /* RouteOptimizer.h */,
+				27BBB6A316A0956400EA5373 /* RouteOptimizer.m */,
+				27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */,
+				27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		27BBB62D16A0621D00EA5373 = {
+			isa = PBXGroup;
+			children = (
+				27AAB9B116A20457009AC694 /* MapKit.framework */,
+				27BBB6C916A0A79300EA5373 /* CoreLocation.framework */,
+				27BBB64216A0621E00EA5373 /* FindOnTheWay */,
+				27BBB66616A0621E00EA5373 /* FindOnTheWayTests */,
+				27BBB63B16A0621E00EA5373 /* Frameworks */,
+				27BBB63916A0621E00EA5373 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27BBB63916A0621E00EA5373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB63816A0621E00EA5373 /* FindOnTheWay.app */,
+				27BBB65F16A0621E00EA5373 /* FindOnTheWayTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27BBB63B16A0621E00EA5373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB63C16A0621E00EA5373 /* UIKit.framework */,
+				27BBB63E16A0621E00EA5373 /* Foundation.framework */,
+				27BBB64016A0621E00EA5373 /* CoreGraphics.framework */,
+				27BBB66016A0621E00EA5373 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27BBB64216A0621E00EA5373 /* FindOnTheWay */ = {
+			isa = PBXGroup;
+			children = (
+				27AAB9B816A2077F009AC694 /* Services */,
+				27AAB9B716A20762009AC694 /* Models */,
+				27AAB9B616A2074A009AC694 /* Controllers */,
+				27BBB64B16A0621E00EA5373 /* AppDelegate.h */,
+				27BBB64C16A0621E00EA5373 /* AppDelegate.m */,
+				27BBB65416A0621E00EA5373 /* MainStoryboard.storyboard */,
+				27BBB64316A0621E00EA5373 /* Supporting Files */,
+			);
+			path = FindOnTheWay;
+			sourceTree = "<group>";
+		};
+		27BBB64316A0621E00EA5373 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB64416A0621E00EA5373 /* FindOnTheWay-Info.plist */,
+				27BBB64516A0621E00EA5373 /* InfoPlist.strings */,
+				27BBB64816A0621E00EA5373 /* main.m */,
+				27BBB64A16A0621E00EA5373 /* FindOnTheWay-Prefix.pch */,
+				27BBB64E16A0621E00EA5373 /* Default.png */,
+				27BBB65016A0621E00EA5373 /* Default@2x.png */,
+				27BBB65216A0621E00EA5373 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27BBB66616A0621E00EA5373 /* FindOnTheWayTests */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB67716A0623C00EA5373 /* GoogleRouteTest.h */,
+				27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */,
+				27BBB66716A0621E00EA5373 /* Supporting Files */,
+				27BBB69B16A0871200EA5373 /* OnTheWayTestCase.h */,
+				27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */,
+				27BBB69F16A0955600EA5373 /* RouteOptimizerTest.h */,
+				27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */,
+			);
+			path = FindOnTheWayTests;
+			sourceTree = "<group>";
+		};
+		27BBB66716A0621E00EA5373 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27BBB66816A0621E00EA5373 /* FindOnTheWayTests-Info.plist */,
+				27BBB66916A0621E00EA5373 /* InfoPlist.strings */,
+				56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27BBB63716A0621E00EA5373 /* FindOnTheWay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BBB67116A0621E00EA5373 /* Build configuration list for PBXNativeTarget "FindOnTheWay" */;
+			buildPhases = (
+				27BBB63416A0621E00EA5373 /* Sources */,
+				27BBB63516A0621E00EA5373 /* Frameworks */,
+				27BBB63616A0621E00EA5373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindOnTheWay;
+			productName = FindOnTheWay;
+			productReference = 27BBB63816A0621E00EA5373 /* FindOnTheWay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27BBB65E16A0621E00EA5373 /* FindOnTheWayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BBB67416A0621E00EA5373 /* Build configuration list for PBXNativeTarget "FindOnTheWayTests" */;
+			buildPhases = (
+				27BBB65A16A0621E00EA5373 /* Sources */,
+				27BBB65B16A0621E00EA5373 /* Frameworks */,
+				27BBB65C16A0621E00EA5373 /* Resources */,
+				27BBB65D16A0621E00EA5373 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BBB66516A0621E00EA5373 /* PBXTargetDependency */,
+			);
+			name = FindOnTheWayTests;
+			productName = FindOnTheWayTests;
+			productReference = 27BBB65F16A0621E00EA5373 /* FindOnTheWayTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27BBB62F16A0621D00EA5373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Julietta Yaunches";
+			};
+			buildConfigurationList = 27BBB63216A0621D00EA5373 /* Build configuration list for PBXProject "FindOnTheWay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27BBB62D16A0621D00EA5373;
+			productRefGroup = 27BBB63916A0621E00EA5373 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27BBB63716A0621E00EA5373 /* FindOnTheWay */,
+				27BBB65E16A0621E00EA5373 /* FindOnTheWayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27BBB63616A0621E00EA5373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BBB64716A0621E00EA5373 /* InfoPlist.strings in Resources */,
+				27BBB64F16A0621E00EA5373 /* Default.png in Resources */,
+				27BBB65116A0621E00EA5373 /* Default@2x.png in Resources */,
+				27BBB65316A0621E00EA5373 /* Default-568h@2x.png in Resources */,
+				27BBB65616A0621E00EA5373 /* MainStoryboard.storyboard in Resources */,
+				56E44EE8828EB521EB54A844 /* brooklyn_to_forest_hill.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BBB65C16A0621E00EA5373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BBB66B16A0621E00EA5373 /* InfoPlist.strings in Resources */,
+				56E44D67AED7C81D5E7D5A90 /* brooklyn_to_forest_hill.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27BBB65D16A0621E00EA5373 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27BBB63416A0621E00EA5373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BBB64916A0621E00EA5373 /* main.m in Sources */,
+				27BBB64D16A0621E00EA5373 /* AppDelegate.m in Sources */,
+				27BBB6A416A0956400EA5373 /* RouteOptimizer.m in Sources */,
+				27BBB6B316A0A29100EA5373 /* RouteStep.m in Sources */,
+				27BBB6CE16A0A89600EA5373 /* RoutePoint.m in Sources */,
+				27BBB6D116A0EFF800EA5373 /* RouteInputViewController.m in Sources */,
+				27AAB9AC16A1E793009AC694 /* GoogleDirectionsConnection.m in Sources */,
+				27AAB9B016A1FDB3009AC694 /* GoogleRoute.m in Sources */,
+				27AAB9B516A20743009AC694 /* RouteMapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27BBB65A16A0621E00EA5373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BBB67916A0623C00EA5373 /* GoogleRouteTest.m in Sources */,
+				27BBB69D16A0871200EA5373 /* OnTheWayTestCase.m in Sources */,
+				27BBB6A116A0955600EA5373 /* RouteOptimizerTest.m in Sources */,
+				27BBB6B416A0A29100EA5373 /* RouteStep.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27BBB66516A0621E00EA5373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27BBB63716A0621E00EA5373 /* FindOnTheWay */;
+			targetProxy = 27BBB66416A0621E00EA5373 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27BBB64516A0621E00EA5373 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27BBB64616A0621E00EA5373 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27BBB65416A0621E00EA5373 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27BBB65516A0621E00EA5373 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		27BBB66916A0621E00EA5373 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27BBB66A16A0621E00EA5373 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27BBB66F16A0621E00EA5373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27BBB67016A0621E00EA5373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27BBB67216A0621E00EA5373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				INFOPLIST_FILE = "FindOnTheWay/FindOnTheWay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27BBB67316A0621E00EA5373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				INFOPLIST_FILE = "FindOnTheWay/FindOnTheWay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27BBB67516A0621E00EA5373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FindOnTheWay.app/FindOnTheWay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				INFOPLIST_FILE = "FindOnTheWayTests/FindOnTheWayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		27BBB67616A0621E00EA5373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FindOnTheWay.app/FindOnTheWay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				INFOPLIST_FILE = "FindOnTheWayTests/FindOnTheWayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27BBB63216A0621D00EA5373 /* Build configuration list for PBXProject "FindOnTheWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BBB66F16A0621E00EA5373 /* Debug */,
+				27BBB67016A0621E00EA5373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BBB67116A0621E00EA5373 /* Build configuration list for PBXNativeTarget "FindOnTheWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BBB67216A0621E00EA5373 /* Debug */,
+				27BBB67316A0621E00EA5373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27BBB67416A0621E00EA5373 /* Build configuration list for PBXNativeTarget "FindOnTheWayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BBB67516A0621E00EA5373 /* Debug */,
+				27BBB67616A0621E00EA5373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27BBB62F16A0621D00EA5373 /* Project object */;
+}
