@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2732841816A5D60600350E0A /* BasicRouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732841716A5D60600350E0A /* BasicRouteStep.m */; };
+		2732841C16A5D63300350E0A /* CumulativeRouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732841B16A5D63300350E0A /* CumulativeRouteStep.m */; };
+		2732841F16A5D64300350E0A /* GooglePlacesConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732841E16A5D64300350E0A /* GooglePlacesConnection.m */; };
+		2732842216A5D64C00350E0A /* GooglePlacesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842116A5D64C00350E0A /* GooglePlacesObject.m */; };
+		2732842516A5D65700350E0A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842416A5D65700350E0A /* MBProgressHUD.m */; };
+		2732842D16A5D74300350E0A /* CumulativeRouteStepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842C16A5D74300350E0A /* CumulativeRouteStepTest.m */; };
+		2732843016A5D74B00350E0A /* RouteStepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842F16A5D74B00350E0A /* RouteStepTest.m */; };
+		2732843A16A5DCBC00350E0A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732843916A5DCBC00350E0A /* libOCMock.a */; };
 		27AAB9AC16A1E793009AC694 /* GoogleDirectionsConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */; };
 		27AAB9B016A1FDB3009AC694 /* GoogleRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */; };
 		27AAB9B216A20457009AC694 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AAB9B116A20457009AC694 /* MapKit.framework */; };
@@ -25,12 +33,9 @@
 		27BBB66216A0621E00EA5373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63C16A0621E00EA5373 /* UIKit.framework */; };
 		27BBB66316A0621E00EA5373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB63E16A0621E00EA5373 /* Foundation.framework */; };
 		27BBB66B16A0621E00EA5373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27BBB66916A0621E00EA5373 /* InfoPlist.strings */; };
-		27BBB67916A0623C00EA5373 /* GoogleRouteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */; };
 		27BBB69D16A0871200EA5373 /* OnTheWayTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */; };
 		27BBB6A116A0955600EA5373 /* RouteOptimizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */; };
 		27BBB6A416A0956400EA5373 /* RouteOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6A316A0956400EA5373 /* RouteOptimizer.m */; };
-		27BBB6B316A0A29100EA5373 /* RouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6B216A0A29100EA5373 /* RouteStep.m */; };
-		27BBB6B416A0A29100EA5373 /* RouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6B216A0A29100EA5373 /* RouteStep.m */; };
 		27BBB6CA16A0A79300EA5373 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BBB6C916A0A79300EA5373 /* CoreLocation.framework */; };
 		27BBB6CE16A0A89600EA5373 /* RoutePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6CD16A0A89600EA5373 /* RoutePoint.m */; };
 		27BBB6D116A0EFF800EA5373 /* RouteInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */; };
@@ -49,6 +54,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2732841616A5D60600350E0A /* BasicRouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicRouteStep.h; sourceTree = "<group>"; };
+		2732841716A5D60600350E0A /* BasicRouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicRouteStep.m; sourceTree = "<group>"; };
+		2732841A16A5D63300350E0A /* CumulativeRouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeRouteStep.h; sourceTree = "<group>"; };
+		2732841B16A5D63300350E0A /* CumulativeRouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeRouteStep.m; sourceTree = "<group>"; };
+		2732841D16A5D64300350E0A /* GooglePlacesConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesConnection.h; sourceTree = "<group>"; };
+		2732841E16A5D64300350E0A /* GooglePlacesConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesConnection.m; sourceTree = "<group>"; };
+		2732842016A5D64C00350E0A /* GooglePlacesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesObject.h; sourceTree = "<group>"; };
+		2732842116A5D64C00350E0A /* GooglePlacesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesObject.m; sourceTree = "<group>"; };
+		2732842316A5D65700350E0A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2732842416A5D65700350E0A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2732842B16A5D74300350E0A /* CumulativeRouteStepTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeRouteStepTest.h; sourceTree = "<group>"; };
+		2732842C16A5D74300350E0A /* CumulativeRouteStepTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeRouteStepTest.m; sourceTree = "<group>"; };
+		2732842E16A5D74B00350E0A /* RouteStepTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteStepTest.h; sourceTree = "<group>"; };
+		2732842F16A5D74B00350E0A /* RouteStepTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteStepTest.m; sourceTree = "<group>"; };
+		2732843916A5DCBC00350E0A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
 		27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsConnection.h; sourceTree = "<group>"; };
 		27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsConnection.m; sourceTree = "<group>"; };
 		27AAB9AE16A1FDB3009AC694 /* GoogleRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleRoute.h; sourceTree = "<group>"; };
@@ -74,16 +94,12 @@
 		27BBB66016A0621E00EA5373 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		27BBB66816A0621E00EA5373 /* FindOnTheWayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindOnTheWayTests-Info.plist"; sourceTree = "<group>"; };
 		27BBB66A16A0621E00EA5373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		27BBB67716A0623C00EA5373 /* GoogleRouteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleRouteTest.h; sourceTree = "<group>"; };
-		27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleRouteTest.m; sourceTree = "<group>"; };
 		27BBB69B16A0871200EA5373 /* OnTheWayTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnTheWayTestCase.h; sourceTree = "<group>"; };
 		27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnTheWayTestCase.m; sourceTree = "<group>"; };
 		27BBB69F16A0955600EA5373 /* RouteOptimizerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteOptimizerTest.h; sourceTree = "<group>"; };
 		27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteOptimizerTest.m; sourceTree = "<group>"; };
 		27BBB6A216A0956400EA5373 /* RouteOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteOptimizer.h; sourceTree = "<group>"; };
 		27BBB6A316A0956400EA5373 /* RouteOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteOptimizer.m; sourceTree = "<group>"; };
-		27BBB6B116A0A29100EA5373 /* RouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteStep.h; sourceTree = "<group>"; };
-		27BBB6B216A0A29100EA5373 /* RouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteStep.m; sourceTree = "<group>"; };
 		27BBB6C916A0A79300EA5373 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		27BBB6CC16A0A89600EA5373 /* RoutePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePoint.h; sourceTree = "<group>"; };
 		27BBB6CD16A0A89600EA5373 /* RoutePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePoint.m; sourceTree = "<group>"; };
@@ -112,12 +128,21 @@
 				27BBB66116A0621E00EA5373 /* SenTestingKit.framework in Frameworks */,
 				27BBB66216A0621E00EA5373 /* UIKit.framework in Frameworks */,
 				27BBB66316A0621E00EA5373 /* Foundation.framework in Frameworks */,
+				2732843A16A5DCBC00350E0A /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2732843C16A5DE1D00350E0A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2732843916A5DCBC00350E0A /* libOCMock.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		27AAB9B616A2074A009AC694 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +157,14 @@
 		27AAB9B716A20762009AC694 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2732842016A5D64C00350E0A /* GooglePlacesObject.h */,
+				2732842116A5D64C00350E0A /* GooglePlacesObject.m */,
+				2732841A16A5D63300350E0A /* CumulativeRouteStep.h */,
+				2732841B16A5D63300350E0A /* CumulativeRouteStep.m */,
 				27AAB9AE16A1FDB3009AC694 /* GoogleRoute.h */,
 				27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */,
-				27BBB6B116A0A29100EA5373 /* RouteStep.h */,
-				27BBB6B216A0A29100EA5373 /* RouteStep.m */,
+				2732841616A5D60600350E0A /* BasicRouteStep.h */,
+				2732841716A5D60600350E0A /* BasicRouteStep.m */,
 				27BBB6CC16A0A89600EA5373 /* RoutePoint.h */,
 				27BBB6CD16A0A89600EA5373 /* RoutePoint.m */,
 			);
@@ -145,6 +174,8 @@
 		27AAB9B816A2077F009AC694 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2732841D16A5D64300350E0A /* GooglePlacesConnection.h */,
+				2732841E16A5D64300350E0A /* GooglePlacesConnection.m */,
 				27BBB6A216A0956400EA5373 /* RouteOptimizer.h */,
 				27BBB6A316A0956400EA5373 /* RouteOptimizer.m */,
 				27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */,
@@ -156,6 +187,7 @@
 		27BBB62D16A0621D00EA5373 = {
 			isa = PBXGroup;
 			children = (
+				2732843C16A5DE1D00350E0A /* Libraries */,
 				27AAB9B116A20457009AC694 /* MapKit.framework */,
 				27BBB6C916A0A79300EA5373 /* CoreLocation.framework */,
 				27BBB64216A0621E00EA5373 /* FindOnTheWay */,
@@ -188,6 +220,8 @@
 		27BBB64216A0621E00EA5373 /* FindOnTheWay */ = {
 			isa = PBXGroup;
 			children = (
+				2732842316A5D65700350E0A /* MBProgressHUD.h */,
+				2732842416A5D65700350E0A /* MBProgressHUD.m */,
 				27AAB9B816A2077F009AC694 /* Services */,
 				27AAB9B716A20762009AC694 /* Models */,
 				27AAB9B616A2074A009AC694 /* Controllers */,
@@ -216,8 +250,10 @@
 		27BBB66616A0621E00EA5373 /* FindOnTheWayTests */ = {
 			isa = PBXGroup;
 			children = (
-				27BBB67716A0623C00EA5373 /* GoogleRouteTest.h */,
-				27BBB67816A0623C00EA5373 /* GoogleRouteTest.m */,
+				2732842E16A5D74B00350E0A /* RouteStepTest.h */,
+				2732842F16A5D74B00350E0A /* RouteStepTest.m */,
+				2732842B16A5D74300350E0A /* CumulativeRouteStepTest.h */,
+				2732842C16A5D74300350E0A /* CumulativeRouteStepTest.m */,
 				27BBB66716A0621E00EA5373 /* Supporting Files */,
 				27BBB69B16A0871200EA5373 /* OnTheWayTestCase.h */,
 				27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */,
@@ -352,12 +388,16 @@
 				27BBB64916A0621E00EA5373 /* main.m in Sources */,
 				27BBB64D16A0621E00EA5373 /* AppDelegate.m in Sources */,
 				27BBB6A416A0956400EA5373 /* RouteOptimizer.m in Sources */,
-				27BBB6B316A0A29100EA5373 /* RouteStep.m in Sources */,
 				27BBB6CE16A0A89600EA5373 /* RoutePoint.m in Sources */,
 				27BBB6D116A0EFF800EA5373 /* RouteInputViewController.m in Sources */,
 				27AAB9AC16A1E793009AC694 /* GoogleDirectionsConnection.m in Sources */,
 				27AAB9B016A1FDB3009AC694 /* GoogleRoute.m in Sources */,
 				27AAB9B516A20743009AC694 /* RouteMapViewController.m in Sources */,
+				2732841816A5D60600350E0A /* BasicRouteStep.m in Sources */,
+				2732841C16A5D63300350E0A /* CumulativeRouteStep.m in Sources */,
+				2732841F16A5D64300350E0A /* GooglePlacesConnection.m in Sources */,
+				2732842216A5D64C00350E0A /* GooglePlacesObject.m in Sources */,
+				2732842516A5D65700350E0A /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +405,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27BBB67916A0623C00EA5373 /* GoogleRouteTest.m in Sources */,
 				27BBB69D16A0871200EA5373 /* OnTheWayTestCase.m in Sources */,
 				27BBB6A116A0955600EA5373 /* RouteOptimizerTest.m in Sources */,
-				27BBB6B416A0A29100EA5373 /* RouteStep.m in Sources */,
+				2732842D16A5D74300350E0A /* CumulativeRouteStepTest.m in Sources */,
+				2732843016A5D74B00350E0A /* RouteStepTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +532,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/usr/include\"";
 				INFOPLIST_FILE = "FindOnTheWayTests/FindOnTheWayTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/usr/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -509,7 +559,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindOnTheWay/FindOnTheWay-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/usr/include\"";
 				INFOPLIST_FILE = "FindOnTheWayTests/FindOnTheWayTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/usr/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
