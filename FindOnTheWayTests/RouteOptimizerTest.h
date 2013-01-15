@@ -1,7 +1,7 @@
 #import "OnTheWayTestCase.h"
 
 @class RoutePoint;
-@class RouteStep;
+@class BasicRouteStep;
 
 @interface RouteOptimizerTest : OnTheWayTestCase
 
@@ -16,14 +16,14 @@
 @property(nonatomic, strong) RoutePoint *step8End;
 @property(nonatomic, strong) RoutePoint *step9End;
 @property(nonatomic, strong) RoutePoint *forestParkEnd;
-@property(nonatomic, strong) RouteStep *step1;
-@property(nonatomic, strong) RouteStep *step2;
-@property(nonatomic, strong) RouteStep *step3;
-@property(nonatomic, strong) RouteStep *step4;
-@property(nonatomic, strong) RouteStep *step6;
-@property(nonatomic, strong) RouteStep *step5;
-@property(nonatomic, strong) RouteStep *step7;
-@property(nonatomic, strong) RouteStep *step8;
-@property(nonatomic, strong) RouteStep *step9;
-@property(nonatomic, strong) RouteStep *step10;
+@property(nonatomic, strong) BasicRouteStep *step1;
+@property(nonatomic, strong) BasicRouteStep *step2;
+@property(nonatomic, strong) BasicRouteStep *step3;
+@property(nonatomic, strong) BasicRouteStep *step4;
+@property(nonatomic, strong) BasicRouteStep *step6;
+@property(nonatomic, strong) BasicRouteStep *step5;
+@property(nonatomic, strong) BasicRouteStep *step7;
+@property(nonatomic, strong) BasicRouteStep *step8;
+@property(nonatomic, strong) BasicRouteStep *step9;
+@property(nonatomic, strong) BasicRouteStep *step10;
 @end

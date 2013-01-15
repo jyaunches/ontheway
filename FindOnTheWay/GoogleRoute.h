@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
-#import "RouteStep.h"
+#import "BasicRouteStep.h"
 
 @interface GoogleRoute : NSObject
 @property(nonatomic, readonly) NSArray *steps;
 
 + (id)initWithSteps:(NSArray *)steps;
 
-- (RouteStep *)firstStep;
-- (RouteStep *)finalStep;
+- (BasicRouteStep *)firstStep;
+- (BasicRouteStep *)finalStep;
 
 - (NSArray *)beginningSteps;
 - (NSArray *)middleSteps;

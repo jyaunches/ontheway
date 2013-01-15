@@ -1,4 +1,5 @@
 #import "RouteOptimizer.h"
+#import "CumulativeRouteStep.h"
 
 @implementation RouteOptimizer
 
@@ -6,31 +7,30 @@
     NSMutableArray *significantRoutes = [NSMutableArray array];
     double avgDist = [self averageDistance:steps];
 
-    id startLocation = [[[steps objectAtIndex:0] startLocation] self];
-    id endLocation = nil;
     float cumulativeDistance = 0;
-
     NSEnumerator *stepEnumerator = [steps objectEnumerator];
-    RouteStep *nextStep;
+    NSMutableArray *cumulativeSteps = [NSMutableArray arrayWithCapacity:steps.count];
+
+    BasicRouteStep *nextStep;
     while (nextStep = [stepEnumerator nextObject]) {
-        endLocation = nextStep.endLocation.self;
         cumulativeDistance += nextStep.distanceInMeter;
+        [cumulativeSteps addObject:nextStep];
 
         BOOL distanceIsBigEnough = [self distanceIsLargeEnough:[nextStep distanceInMeter] givenAverage:avgDist];
         BOOL cumulativeIsBigEnough = [self distanceIsLargeEnough:cumulativeDistance givenAverage:avgDist];
         BOOL isLastStep = [self isLastStep:nextStep forSteps:steps];
 
         if (distanceIsBigEnough || cumulativeIsBigEnough || isLastStep){
-            [significantRoutes addObject:[RouteStep initWithStart:startLocation andWithEnd:endLocation andWithDistanceInMeters:cumulativeDistance]];
-            startLocation = endLocation;
+            [significantRoutes addObject:[CumulativeRouteStep initWithSteps:cumulativeSteps]];
             cumulativeDistance = 0;
+            [cumulativeSteps removeAllObjects];
         }
     }
 
     return significantRoutes;
 }
 
-+ (BOOL)isLastStep:(RouteStep *)nextStep forSteps:(NSArray *)allSteps {
++ (BOOL)isLastStep:(BasicRouteStep *)nextStep forSteps:(NSArray *)allSteps {
     return ([allSteps indexOfObject:nextStep] == (allSteps.count - 1));
 }
 
@@ -50,7 +50,7 @@
         RoutePoint *startLocation = [self buildPoint:[stepJson objectForKey:@"start_location"]];
         RoutePoint *endLocation = [self buildPoint:[stepJson objectForKey:@"end_location"]];
 
-        [allSteps addObject:[RouteStep initWithStart:startLocation andWithEnd:endLocation andWithDistanceInMeters:meter.floatValue]];
+        [allSteps addObject:[BasicRouteStep initWithStart:startLocation andWithEnd:endLocation andWithDistanceInMeters:meter.floatValue]];
     }
 
     return [GoogleRoute initWithSteps:[self optimizedRoutes:allSteps]];
@@ -64,7 +64,7 @@
 
 + (double)averageDistance:(NSArray *)steps {
     double totalDistance = 0.0;
-    for (RouteStep *step in steps){ totalDistance += step.distanceInMeter; }
+    for (BasicRouteStep *step in steps){ totalDistance += step.distanceInMeter; }
 
     return totalDistance / steps.count;
 }

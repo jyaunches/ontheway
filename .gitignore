@@ -9,6 +9,6 @@
 
 # Ignore rubymine files
 /.idea/vcs.xml
-.idea
-.idea/
-.idea/workspace.xml
+/.idea
+/.idea/
+/.idea/workspace.xml

@@ -1,5 +1,5 @@
 #import "GoogleRoute.h"
-#import "RouteStep.h"
+#import "BasicRouteStep.h"
 
 @interface GoogleRoute ()
 @property(nonatomic, readwrite) NSArray *steps;
@@ -34,11 +34,11 @@
     return [NSArray arrayWithObjects:self.steps.lastObject, nil];
 }
 
-- (RouteStep *)firstStep{
+- (BasicRouteStep *)firstStep{
     return [self.steps objectAtIndex:0];
 }
 
-- (RouteStep *)finalStep{
+- (BasicRouteStep *)finalStep{
     return [self.steps lastObject];
 }
 

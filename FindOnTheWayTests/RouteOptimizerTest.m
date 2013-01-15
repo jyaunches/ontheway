@@ -1,5 +1,5 @@
 #import "RouteOptimizerTest.h"
-#import "RouteStep.h"
+#import "CumulativeRouteStep.h"
 #import "GoogleRoute.h"
 #import "RouteOptimizer.h"
 
@@ -43,30 +43,30 @@
     self.step9End = [RoutePoint initWithLatitude:40.696320f longitude:-73.86651000000001f];
     self.forestParkEnd = [RoutePoint initWithLatitude:40.699970f longitude:-73.85658000000001f];
 
-    self.step1 = [RouteStep initWithStart:self.brooklynStart andWithEnd:self.brooklynStart andWithDistanceInMeters:43];
-    self.step2 = [RouteStep initWithStart:self.step1End andWithEnd:self.step2End andWithDistanceInMeters:96];
-    self.step3 = [RouteStep initWithStart:self.step2End andWithEnd:self.step3End andWithDistanceInMeters:243];
-    self.step4 = [RouteStep initWithStart:self.step3End andWithEnd:self.step4End andWithDistanceInMeters:411];
-    self.step5 = [RouteStep initWithStart:self.step4End andWithEnd:self.step5End andWithDistanceInMeters:4903];
-    self.step6 = [RouteStep initWithStart:self.step5End andWithEnd:self.step6End andWithDistanceInMeters:2289];
-    self.step7 = [RouteStep initWithStart:self.step6End andWithEnd:self.step7End andWithDistanceInMeters:3431];
-    self.step8 = [RouteStep initWithStart:self.step7End andWithEnd:self.step8End andWithDistanceInMeters:137];
-    self.step9 = [RouteStep initWithStart:self.step8End andWithEnd:self.step9End andWithDistanceInMeters:277];
-    self.step10 = [RouteStep initWithStart:self.step9End andWithEnd:self.forestParkEnd andWithDistanceInMeters:1105];
+    self.step1 = [BasicRouteStep initWithStart:self.brooklynStart andWithEnd:self.brooklynStart andWithDistanceInMeters:43];
+    self.step2 = [BasicRouteStep initWithStart:self.step1End andWithEnd:self.step2End andWithDistanceInMeters:96];
+    self.step3 = [BasicRouteStep initWithStart:self.step2End andWithEnd:self.step3End andWithDistanceInMeters:243];
+    self.step4 = [BasicRouteStep initWithStart:self.step3End andWithEnd:self.step4End andWithDistanceInMeters:411];
+    self.step5 = [BasicRouteStep initWithStart:self.step4End andWithEnd:self.step5End andWithDistanceInMeters:4903];
+    self.step6 = [BasicRouteStep initWithStart:self.step5End andWithEnd:self.step6End andWithDistanceInMeters:2289];
+    self.step7 = [BasicRouteStep initWithStart:self.step6End andWithEnd:self.step7End andWithDistanceInMeters:3431];
+    self.step8 = [BasicRouteStep initWithStart:self.step7End andWithEnd:self.step8End andWithDistanceInMeters:137];
+    self.step9 = [BasicRouteStep initWithStart:self.step8End andWithEnd:self.step9End andWithDistanceInMeters:277];
+    self.step10 = [BasicRouteStep initWithStart:self.step9End andWithEnd:self.forestParkEnd andWithDistanceInMeters:1105];
 }
 
 - (void)testOptimizerShouldCumulateDistanceOverMultipleSmallerRoutes
 {
     GoogleRoute *route = [GoogleRoute initWithSteps:[NSArray arrayWithObjects:self.step1, self.step2, self.step3, self.step4, self.step5, nil]];
 
-    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route];
-    RouteStep *firstStep = [optimizedSteps objectAtIndex:0];
+    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route.steps];
+    CumulativeRouteStep *firstStep = [optimizedSteps objectAtIndex:0];
 
     STAssertEquals(firstStep.startLocation.latitude, self.brooklynStart.latitude, @"First route step start location inaccurate");
     STAssertEquals(firstStep.endLocation.latitude, self.step4End.latitude, @"First route step end location inaccurate");
 
     float expectedDistance = 793;
-    STAssertEquals(firstStep.distanceInMeter, expectedDistance, @"Step should cumulate distances of smaller steps before it");
+    STAssertEquals(firstStep.distanceInMeters, expectedDistance, @"Step should cumulate distances of smaller steps before it");
 }
 
 - (void)testOptimizerShouldCreateRoutesBasedOnAverageDistanceOfSteps
@@ -74,7 +74,7 @@
     GoogleRoute *route = [GoogleRoute initWithSteps:[NSArray arrayWithObjects:self.step1, self.step2, self.step3, self.step4, self.step5,
                                                                               self.step6, self.step7, self.step8, self.step9, self.step10, nil]];
 
-    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route];
+    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route.steps];
     STAssertTrue((optimizedSteps.count == 5), @"Should only be 5 steps");
 }
 
@@ -83,12 +83,12 @@
     GoogleRoute *route = [GoogleRoute initWithSteps:[NSArray arrayWithObjects:self.step1, self.step2, self.step3, self.step4, self.step5,
                                                                               self.step6, self.step7, self.step8, self.step9, self.step10, nil]];
 
-    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route];
+    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:route.steps];
 
-    RouteStep *secondStep = [optimizedSteps objectAtIndex:1];
-    RouteStep *thirdStep = [optimizedSteps objectAtIndex:2];
-    RouteStep *fourthStep = [optimizedSteps objectAtIndex:3];
-    RouteStep *fifthStep = [optimizedSteps lastObject];
+    CumulativeRouteStep *secondStep = [optimizedSteps objectAtIndex:1];
+    CumulativeRouteStep *thirdStep = [optimizedSteps objectAtIndex:2];
+    CumulativeRouteStep *fourthStep = [optimizedSteps objectAtIndex:3];
+    CumulativeRouteStep *fifthStep = [optimizedSteps lastObject];
 
     STAssertEquals(secondStep.startLocation.latitude, self.step4End.latitude, @"Second route step start location inaccurate");
     STAssertEquals(secondStep.endLocation.latitude, self.step5End.latitude, @"Second route step end location inaccurate");
@@ -115,7 +115,7 @@
                                                                  error:nil];
 
     GoogleRoute *route = [RouteOptimizer fromJSON:parsedJSON];
-    RouteStep *fifthStep = [route.steps lastObject];
+    CumulativeRouteStep *fifthStep = [route.steps lastObject];
 
     STAssertTrue((route.steps.count == 5), @"Should only be 5 steps");
     STAssertEquals(fifthStep.endLocation.latitude, 40.699970f, @"Route steps not being calculated");
