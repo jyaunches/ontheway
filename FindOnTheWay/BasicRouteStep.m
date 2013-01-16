@@ -1,18 +1,19 @@
 #import "BasicRouteStep.h"
-#import "RoutePoint.h"
 
 @implementation BasicRouteStep
 
 @synthesize endLocation = _endLocation;
 @synthesize startLocation = _startLocation;
 @synthesize distanceInMeter = _distanceInMeter;
+@synthesize routeType = _routeType;
 
-+ (id)initWithStart:(RoutePoint *)startLocation andWithEnd:(RoutePoint *)endLocation andWithDistanceInMeters:(float)distanceInMeter {
++ (id)initWithStart:(RoutePoint *)startLocation andWithEnd:(RoutePoint *)endLocation andWithDistanceInMeters:(float)distanceInMeter andWithType:(RouteStepType)type{
     BasicRouteStep *step = [[BasicRouteStep alloc] init];
     
     step.startLocation = startLocation;
     step.endLocation = endLocation;
     step.distanceInMeter = distanceInMeter;
+    step.routeType = type;
 
     return step;
 }

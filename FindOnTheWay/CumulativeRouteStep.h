@@ -10,6 +10,8 @@
 
 @class RoutePoint;
 
+typedef enum {UNASSIGNED, RESIDENTIAL, HIGHWAY} RouteStepType;
+
 @interface CumulativeRouteStep : NSObject
 
 @property(nonatomic, copy) NSMutableArray *steps;
@@ -18,4 +20,7 @@
 - (RoutePoint *)startLocation;
 - (RoutePoint *)endLocation;
 - (float)distanceInMeters;
+- (RouteStepType)routeType;
+
+- (NSArray *)pointsToSearchForPlaces;
 @end

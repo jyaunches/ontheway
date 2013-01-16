@@ -15,6 +15,7 @@
 		2732842D16A5D74300350E0A /* CumulativeRouteStepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842C16A5D74300350E0A /* CumulativeRouteStepTest.m */; };
 		2732843016A5D74B00350E0A /* RouteStepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732842F16A5D74B00350E0A /* RouteStepTest.m */; };
 		2732843A16A5DCBC00350E0A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732843916A5DCBC00350E0A /* libOCMock.a */; };
+		2732844316A604BB00350E0A /* brooklyn_to_baltimore.json in Resources */ = {isa = PBXBuildFile; fileRef = 2732844216A604BB00350E0A /* brooklyn_to_baltimore.json */; };
 		27AAB9AC16A1E793009AC694 /* GoogleDirectionsConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */; };
 		27AAB9B016A1FDB3009AC694 /* GoogleRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AAB9AF16A1FDB3009AC694 /* GoogleRoute.m */; };
 		27AAB9B216A20457009AC694 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AAB9B116A20457009AC694 /* MapKit.framework */; };
@@ -69,6 +70,7 @@
 		2732842E16A5D74B00350E0A /* RouteStepTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteStepTest.h; sourceTree = "<group>"; };
 		2732842F16A5D74B00350E0A /* RouteStepTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteStepTest.m; sourceTree = "<group>"; };
 		2732843916A5DCBC00350E0A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
+		2732844216A604BB00350E0A /* brooklyn_to_baltimore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brooklyn_to_baltimore.json; sourceTree = "<group>"; };
 		27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDirectionsConnection.h; sourceTree = "<group>"; };
 		27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDirectionsConnection.m; sourceTree = "<group>"; };
 		27AAB9AE16A1FDB3009AC694 /* GoogleRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleRoute.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		27BBB66716A0621E00EA5373 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2732844216A604BB00350E0A /* brooklyn_to_baltimore.json */,
 				27BBB66816A0621E00EA5373 /* FindOnTheWayTests-Info.plist */,
 				27BBB66916A0621E00EA5373 /* InfoPlist.strings */,
 				56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */,
@@ -359,6 +362,7 @@
 			files = (
 				27BBB66B16A0621E00EA5373 /* InfoPlist.strings in Resources */,
 				56E44D67AED7C81D5E7D5A90 /* brooklyn_to_forest_hill.json in Resources */,
+				2732844316A604BB00350E0A /* brooklyn_to_baltimore.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

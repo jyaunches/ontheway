@@ -27,11 +27,22 @@
     return [[self.steps lastObject] endLocation];
 }
 
+- (RouteStepType)routeType{
+    return [[self.steps objectAtIndex:0] routeType];
+}
+
 - (float)distanceInMeters{
     float result = 0;
     for (BasicRouteStep *step in self.steps){
         result += step.distanceInMeter;
     }
     return result;
+}
+
+- (NSArray *)pointsToSearchForPlaces {
+    float lat = ([[self startLocation] latitude] + [[self endLocation] latitude]) / 2;
+    float lng = ([[self startLocation] longitude] + [[self endLocation] longitude]) / 2;
+
+    return [NSArray arrayWithObjects:[RoutePoint initWithLatitude:lat longitude:lng], nil];
 }
 @end

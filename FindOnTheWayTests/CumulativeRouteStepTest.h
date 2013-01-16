@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OnTheWayTestCase.h"
 
-@interface CumulativeRouteStepTest : NSObject
+@interface CumulativeRouteStepTest : OnTheWayTestCase
 
 @end
