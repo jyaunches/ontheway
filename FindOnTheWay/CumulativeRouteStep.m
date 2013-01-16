@@ -40,9 +40,17 @@
 }
 
 - (NSArray *)pointsToSearchForPlaces {
-    float lat = ([[self startLocation] latitude] + [[self endLocation] latitude]) / 2;
-    float lng = ([[self startLocation] longitude] + [[self endLocation] longitude]) / 2;
+    NSMutableArray *points = [NSMutableArray array];
 
-    return [NSArray arrayWithObjects:[RoutePoint initWithLatitude:lat longitude:lng], nil];
+    for (BasicRouteStep *step in self.steps){
+        if(step.distanceInMeter >= HALFMILE){
+            float lat = ([[self startLocation] latitude] + [[self endLocation] latitude]) / 2;
+            float lng = ([[self startLocation] longitude] + [[self endLocation] longitude]) / 2;
+
+            RoutePoint *point = [RoutePoint initWithLatitude:lat longitude:lng];
+            [points addObject:point];
+        }
+    }
+    return points;
 }
 @end

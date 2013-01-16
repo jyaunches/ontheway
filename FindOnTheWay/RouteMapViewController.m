@@ -3,10 +3,6 @@
 #import "GoogleDirectionsConnection.h"
 #import "GooglePlacesObject.h"
 
-@interface RouteMapViewController ()
-
-@end
-
 @implementation RouteMapViewController
 
 @synthesize map = _map;

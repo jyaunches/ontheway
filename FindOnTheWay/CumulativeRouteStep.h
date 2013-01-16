@@ -10,6 +10,7 @@
 
 @class RoutePoint;
 
+static int const HALFMILE = 805;
 typedef enum {UNASSIGNED, RESIDENTIAL, HIGHWAY} RouteStepType;
 
 @interface CumulativeRouteStep : NSObject

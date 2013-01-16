@@ -14,9 +14,9 @@
     </list>
     <ignored path="OnTheWay.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="13c6413a-6952-4bac-a99f-6902325decdc" time="1358353933970" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/.name" changelist="13c6413a-6952-4bac-a99f-6902325decdc" time="1358281867690" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/xcode.xml" changelist="13c6413a-6952-4bac-a99f-6902325decdc" time="1358281858124" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="13c6413a-6952-4bac-a99f-6902325decdc" time="1358293120175" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,46 +33,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6.0_1" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RouteOptimizerTest.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/RouteOptimizerTest.h">
+      <file leaf-file-name="RouteMapViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteOptimizer.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindOnTheWay/RouteOptimizer.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="134" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="brooklyn_to_forest_hill.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/brooklyn_to_forest_hill.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="99" selection-start="8770" selection-end="8777" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteOptimizerTest.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/RouteOptimizerTest.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0512">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CumulativeRouteStepTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="174" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+            <state line="3" column="30" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,22 +60,22 @@
         <option value="$PROJECT_DIR$/FindOnTheWay/GooglePlacesConnection.m" />
         <option value="$PROJECT_DIR$/FindOnTheWay/RouteStep.h" />
         <option value="$PROJECT_DIR$/FindOnTheWay/RouteStep.m" />
-        <option value="$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m" />
-        <option value="$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.h" />
-        <option value="$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.m" />
         <option value="$PROJECT_DIR$/FindOnTheWay/BasicRouteStep.h" />
         <option value="$PROJECT_DIR$/FindOnTheWay/BasicRouteStep.m" />
-        <option value="$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m" />
         <option value="$PROJECT_DIR$/FindOnTheWayTests/RouteStepTest.m" />
         <option value="$PROJECT_DIR$/FindOnTheWayTests/brooklyn_to_baltimore.json" />
         <option value="$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.h" />
         <option value="$PROJECT_DIR$/FindOnTheWay/RouteOptimizer.m" />
         <option value="$PROJECT_DIR$/FindOnTheWayTests/RouteOptimizerTest.m" />
+        <option value="$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.h" />
+        <option value="$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.m" />
+        <option value="$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m" />
+        <option value="$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="y" value="47" />
     <option name="width" value="1920" />
     <option name="height" value="1066" />
   </component>
@@ -291,32 +255,32 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
-  <component name="RunManager" selected="OCUnit.All in RouteOptimizerTest">
-    <configuration default="false" name="-[RouteOptimizerTest testOptimizerShouldCumulateDistanceOverMultipleSmallerRoutes]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[RouteOptimizerTest testOptimizerShouldCumulateDistanceOverMultipleSmallerRoutes]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest" TEST_METHOD="testOptimizerShouldCumulateDistanceOverMultipleSmallerRoutes">
-      <envs />
-      <RunnerSettings RunnerId="AppRunner" />
-      <ConfigurationWrapper RunnerId="AppRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="-[RouteOptimizerTest testOptimizerShouldCumulateFirstStepUntilHittingHighway]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[RouteOptimizerTest testOptimizerShouldCumulateFirstStepUntilHittingHighway]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest" TEST_METHOD="testOptimizerShouldCumulateFirstStepUntilHittingHighway">
-      <envs />
-      <RunnerSettings RunnerId="AppRunner" />
-      <ConfigurationWrapper RunnerId="AppRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="OCUnit.-[CumulativeRouteStepTest testShouldGiveOnePointForEachStepOver2Miles]">
     <configuration default="false" name="-[RouteOptimizerTest testShouldHaveHighwayStepsAsIndividualOptimizedSteps]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[RouteOptimizerTest testShouldHaveHighwayStepsAsIndividualOptimizedSteps]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest" TEST_METHOD="testShouldHaveHighwayStepsAsIndividualOptimizedSteps">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="-[RouteOptimizerTest testParsingFromJSON]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[RouteOptimizerTest testParsingFromJSON]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest" TEST_METHOD="testParsingFromJSON">
+    <configuration default="false" name="-[RouteOptimizerTest testParsingFromJSON]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[RouteOptimizerTest testParsingFromJSON]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest" TEST_METHOD="testParsingFromJSON">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="All in RouteOptimizerTest" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="All in RouteOptimizerTest" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest">
+    <configuration default="false" name="All in RouteOptimizerTest" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="All in RouteOptimizerTest" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="RouteOptimizerTest">
+      <envs />
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="-[CumulativeRouteStepTest testShouldGiveOnePointWhenStepsTotalLessThan2Miles]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[CumulativeRouteStepTest testShouldGiveOnePointWhenStepsTotalLessThan2Miles]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="CumulativeRouteStepTest" TEST_METHOD="testShouldGiveOnePointWhenStepsTotalLessThan2Miles">
+      <envs />
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="-[CumulativeRouteStepTest testShouldGiveOnePointForEachStepOver2Miles]" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="-[CumulativeRouteStepTest testShouldGiveOnePointForEachStepOver2Miles]" PROJECT_NAME="FindOnTheWay" TARGET_NAME="FindOnTheWayTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="CumulativeRouteStepTest" TEST_METHOD="testShouldGiveOnePointForEachStepOver2Miles">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
@@ -353,16 +317,16 @@
       <item index="1" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testFloat]" />
       <item index="2" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testOptimizerReturnsRoutesContainingFirstAndFinalLocation]" />
       <item index="3" class="java.lang.String" itemvalue="Application.FindOnTheWay" />
-      <item index="4" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testOptimizerShouldCumulateDistanceOverMultipleSmallerRoutes]" />
-      <item index="5" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testOptimizerShouldCumulateFirstStepUntilHittingHighway]" />
-      <item index="6" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testShouldHaveHighwayStepsAsIndividualOptimizedSteps]" />
-      <item index="7" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testParsingFromJSON]" />
-      <item index="8" class="java.lang.String" itemvalue="OCUnit.All in RouteOptimizerTest" />
+      <item index="4" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testShouldHaveHighwayStepsAsIndividualOptimizedSteps]" />
+      <item index="5" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testParsingFromJSON]" />
+      <item index="6" class="java.lang.String" itemvalue="OCUnit.All in RouteOptimizerTest" />
+      <item index="7" class="java.lang.String" itemvalue="OCUnit.-[CumulativeRouteStepTest testShouldGiveOnePointWhenStepsTotalLessThan2Miles]" />
+      <item index="8" class="java.lang.String" itemvalue="OCUnit.-[CumulativeRouteStepTest testShouldGiveOnePointForEachStepOver2Miles]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="OCUnit.All in RouteOptimizerTest" />
-        <item index="1" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testParsingFromJSON]" />
+        <item index="0" class="java.lang.String" itemvalue="OCUnit.-[CumulativeRouteStepTest testShouldGiveOnePointForEachStepOver2Miles]" />
+        <item index="1" class="java.lang.String" itemvalue="OCUnit.-[CumulativeRouteStepTest testShouldGiveOnePointWhenStepsTotalLessThan2Miles]" />
         <item index="2" class="java.lang.String" itemvalue="OCUnit.All in RouteOptimizerTest" />
         <item index="3" class="java.lang.String" itemvalue="OCUnit.-[RouteOptimizerTest testParsingFromJSON]" />
         <item index="4" class="java.lang.String" itemvalue="OCUnit.All in RouteOptimizerTest" />
@@ -407,18 +371,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1066" extended-state="0" />
+    <frame x="0" y="47" width="1920" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4845679" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.6707819" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.75308645" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24691358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -484,12 +448,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m</url>
-          <line>20</line>
+          <line>16</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -497,11 +461,16 @@
           <line>154</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m</url>
+          <line>42</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="OCWatchpoint">
           <option name="timeStamp" value="25" />
         </breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -510,25 +479,11 @@
         <state line="6" column="166" selection-start="144" selection-end="144" vertical-scroll-proportion="0.17235188" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="70" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#165#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWay/RoutePoint.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" />
+        <state line="3" column="11" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWay/BasicRouteStep.m">
@@ -540,12 +495,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/RouteStepTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="140" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" />
+        <state line="16" column="140" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h">
@@ -569,20 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="174" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/RouteOptimizerTest.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="45" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
@@ -599,14 +537,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWay/RouteOptimizer.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="134" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
+        <state line="26" column="45" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="11" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/RouteOptimizerTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0512">
+        <state line="32" column="21" selection-start="1016" selection-end="1050" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOnTheWay/CumulativeRouteStep.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="21" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="57" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#165#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOnTheWayTests/CumulativeRouteStepTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="51" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#165#200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOnTheWay/RouteMapViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

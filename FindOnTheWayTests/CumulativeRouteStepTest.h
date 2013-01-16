@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "OnTheWayTestCase.h"
 
+@class RoutePoint;
+
 @interface CumulativeRouteStepTest : OnTheWayTestCase
 
+@property(nonatomic, strong) RoutePoint *someStartLocation;
+@property(nonatomic, strong) RoutePoint *someEndLocation;
 @end
