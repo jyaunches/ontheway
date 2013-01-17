@@ -17,7 +17,7 @@
     [googlePlacesConnection getGoogleObjects:midPoint forRadius:1000];
 }
 
-- (void) googlePlacesConnection:(GooglePlacesConnection *)conn didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects{
+- (void)didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects {
     for (GooglePlacesObject *place in objects){
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(place.coordinate, 5000, 5000);
         [self.map setRegion:region animated:NO];

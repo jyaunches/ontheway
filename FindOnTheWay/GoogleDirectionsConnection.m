@@ -1,6 +1,7 @@
 #import "GoogleDirectionsConnection.h"
 #import "RouteOptimizer.h"
 #import "GoogleRoute.h"
+#import "GoogleJSONParser.h"
 
 @interface GoogleDirectionsConnection ()
 @property (nonatomic, strong) NSMutableData *responseData;
@@ -13,9 +14,6 @@
 - (id)initWithDelegate:(id <GoogleDirectionsConnectionDelegate>)del
 {
     self = [super init];
-
-    if (!self)
-        return nil;
     [self setDelegate:del];
     return self;
 }
@@ -41,6 +39,18 @@
     }
 }
 
+- (void)connectionDidFinishLoading:(NSURLConnection *)conn {
+
+    NSArray *directions = [GoogleJSONParser parseDirectionsJSON:self.responseData];
+
+    if (directions == NULL){
+        [delegate errorOccurred];
+    }else{
+        [delegate didFinishLoadingWithGoogleRoute:directions];
+    }
+}
+
+
 - (void)connection:(NSURLConnection *)conn didReceiveResponse:(NSURLResponse *)response {
     [self.responseData setLength:0];
 }
@@ -52,27 +62,6 @@
 - (void)connection:(NSURLConnection *)conn didFailWithError:(NSError *)error {
     //log error
     [delegate errorOccurred];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)conn {
-
-    NSError *jsonError = nil;
-    NSDictionary *parsedJSON = [NSJSONSerialization JSONObjectWithData:self.responseData
-                                                               options:NSJSONReadingMutableLeaves
-                                                                 error:&jsonError];
-
-    if ([jsonError code] == 0) {
-        NSString *responseStatus = [NSString stringWithFormat:@"%@", [parsedJSON objectForKey:@"status"]];
-
-        if ([responseStatus isEqualToString:@"OK"]) {
-            GoogleRoute *googleRoute = [RouteOptimizer fromJSON:parsedJSON];
-            [delegate didFinishLoadingWithGoogleRoute:googleRoute];
-        }
-    }
-    else {
-        //log json error
-        [delegate errorOccurred];
-    }
 }
 
 @end
