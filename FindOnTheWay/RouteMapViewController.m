@@ -2,19 +2,38 @@
 #import "RouteMapViewController.h"
 #import "GoogleDirectionsConnection.h"
 #import "GooglePlacesObject.h"
+#import "MBProgressHUD.h"
+#import "RouteOptimizer.h"
 
-@implementation RouteMapViewController
+@implementation RouteMapViewController {
+@private NSUInteger routePointIndex;
+}
+
 
 @synthesize map = _map;
-@synthesize stepsToShow = _stepsToShow;
+@synthesize optimizedRoute = _optimizedRoute;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self showHUD];
+}
+
+- (void)didFinishLoadingWithGoogleRoute:(NSArray *)basicRouteSteps {
+    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:basicRouteSteps];
+    self.optimizedRoute = [GoogleRoute initWithSteps:optimizedSteps];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    routePointIndex = 0;
+    RoutePoint *point = [[self.optimizedRoute pointsToSearchForPlaces] objectAtIndex:routePointIndex];
+
     googlePlacesConnection = [[GooglePlacesConnection alloc] initWithDelegate:self];
-    BasicRouteStep *o = [_stepsToShow objectAtIndex:0];
-    RoutePoint *midPoint = [o midPoint];
-    [googlePlacesConnection getGoogleObjects:midPoint forRadius:1000];
+    [googlePlacesConnection getGoogleObjects:point forRadius:1000];
+}
+
+- (void)showHUD {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Looking for your directions!";
 }
 
 - (void)didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects {
@@ -39,19 +58,12 @@
 }
 
 - (void) errorOccurred{
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"No Places Found"
-                                                  message:@"There seems to be network issues!"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Network Problems"
+                                                  message:@"We're having trouble retrieving info for your trip."
                                                  delegate:nil
                                         cancelButtonTitle:@"OK"
                                         otherButtonTitles:nil];
     [message show];
 }
-
-//- (void) didFinishLoadingWithGoogleRoute:(GoogleRoute *)optimizedRoutes{
-//    for (BasicRouteStep *step in optimizedRoutes.steps){
-//        [self.map addAnnotation:step.startLocation];
-//        [self.map addAnnotation:step.endLocation];
-//    }
-//}
 
 @end

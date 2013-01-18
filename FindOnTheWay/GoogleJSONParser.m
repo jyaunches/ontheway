@@ -26,16 +26,11 @@
         if ([responseStatus isEqualToString:@"OK"]) {
             //Perform Place Search results
             NSDictionary *gResponseData = [parsedJSON objectForKey:@"results"];
-            NSMutableArray *googlePlacesObjects = [NSMutableArray arrayWithCapacity:[[parsedJSON objectForKey:@"results"] count]];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:39.29038 longitude:-76.61219];
 
             for (NSDictionary *result in gResponseData) {
-                [googlePlacesObjects addObject:result];
-            }
-
-            for (int x = 0; x < [googlePlacesObjects count]; x++) {
-                CLLocation *location = [[CLLocation alloc] initWithLatitude:39.29038 longitude:-76.61219];
-                GooglePlacesObject *object = [[GooglePlacesObject alloc] initWithJsonResultDict:[googlePlacesObjects objectAtIndex:x] andUserCoordinates:location.coordinate];
-                [googlePlacesObjects replaceObjectAtIndex:x withObject:object];
+                GooglePlacesObject *object = [[GooglePlacesObject alloc] initWithJsonResultDict:result andUserCoordinates:location.coordinate];
+                [googlePlacesObjects addObject:object];
             }
 
         }else{

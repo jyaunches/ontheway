@@ -13,6 +13,6 @@
 @end
 
 @protocol GoogleDirectionsConnectionDelegate
-- (void) didFinishLoadingWithGoogleRoute:(GoogleRoute *)optimizedRoutes;
+- (void)didFinishLoadingWithGoogleRoute:(NSArray *)optimizedRoutes;
 - (void) errorOccurred;
 @end

@@ -13,4 +13,5 @@
 - (NSArray *)middleSteps;
 - (NSArray *)endSteps;
 
+- (NSArray *)pointsToSearchForPlaces;
 @end

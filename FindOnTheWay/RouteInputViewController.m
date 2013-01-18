@@ -1,5 +1,5 @@
 #import "RouteInputViewController.h"
-#import "SelectTripSectionViewController.h"
+#import "RouteMapViewController.h"
 
 @implementation RouteInputViewController
 
@@ -10,11 +10,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"SelectTripSegmentSegue"]) {
-        SelectTripSectionViewController *selectTripVC = [segue destinationViewController];
-        [selectTripVC showHUD];
+    if ([[segue identifier] isEqualToString:@"ShowRouteMapSegue"]) {
+        RouteMapViewController *routeMapVC = [segue destinationViewController];
 
-        googleDirectionsConnection = [[GoogleDirectionsConnection alloc] initWithDelegate:selectTripVC];
+        if (googleDirectionsConnection == nil){
+            googleDirectionsConnection = [[GoogleDirectionsConnection alloc] initWithDelegate:routeMapVC];
+        }
         [googleDirectionsConnection getGoogleDirectionsFrom:@"200 Schermerhorn St. Brooklyn NY" to:@"115 N Luzerne Ave. Baltimore MD"];
     }
 }

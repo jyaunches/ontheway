@@ -42,6 +42,9 @@
 		27BBB6D116A0EFF800EA5373 /* RouteInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */; };
 		56E44D67AED7C81D5E7D5A90 /* brooklyn_to_forest_hill.json in Resources */ = {isa = PBXBuildFile; fileRef = 56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */; };
 		56E44EE8828EB521EB54A844 /* brooklyn_to_forest_hill.json in Resources */ = {isa = PBXBuildFile; fileRef = 56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */; };
+		D6B39B1C16A8721E009F818C /* GoogleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B39B1B16A8721E009F818C /* GoogleJSONParser.m */; };
+		D6B39B2016A8724F009F818C /* GoogleJSONParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B39B1F16A8724F009F818C /* GoogleJSONParserTest.m */; };
+		D6B39B2716A87FB1009F818C /* bad_status_response.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B39B2616A87FB1009F818C /* bad_status_response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,11 @@
 		27BBB6CF16A0EFF800EA5373 /* RouteInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteInputViewController.h; sourceTree = "<group>"; };
 		27BBB6D016A0EFF800EA5373 /* RouteInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteInputViewController.m; sourceTree = "<group>"; };
 		56E44107252E34142C980C6B /* brooklyn_to_forest_hill.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = brooklyn_to_forest_hill.json; sourceTree = "<group>"; };
+		D6B39B1A16A8721E009F818C /* GoogleJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleJSONParser.h; sourceTree = "<group>"; };
+		D6B39B1B16A8721E009F818C /* GoogleJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONParser.m; sourceTree = "<group>"; };
+		D6B39B1E16A8724F009F818C /* GoogleJSONParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleJSONParserTest.h; sourceTree = "<group>"; };
+		D6B39B1F16A8724F009F818C /* GoogleJSONParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleJSONParserTest.m; sourceTree = "<group>"; };
+		D6B39B2616A87FB1009F818C /* bad_status_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bad_status_response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,8 @@
 				27BBB6A316A0956400EA5373 /* RouteOptimizer.m */,
 				27AAB9AA16A1E793009AC694 /* GoogleDirectionsConnection.h */,
 				27AAB9AB16A1E793009AC694 /* GoogleDirectionsConnection.m */,
+				D6B39B1A16A8721E009F818C /* GoogleJSONParser.h */,
+				D6B39B1B16A8721E009F818C /* GoogleJSONParser.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -261,6 +271,8 @@
 				27BBB69C16A0871200EA5373 /* OnTheWayTestCase.m */,
 				27BBB69F16A0955600EA5373 /* RouteOptimizerTest.h */,
 				27BBB6A016A0955600EA5373 /* RouteOptimizerTest.m */,
+				D6B39B1E16A8724F009F818C /* GoogleJSONParserTest.h */,
+				D6B39B1F16A8724F009F818C /* GoogleJSONParserTest.m */,
 			);
 			path = FindOnTheWayTests;
 			sourceTree = "<group>";
@@ -268,6 +280,7 @@
 		27BBB66716A0621E00EA5373 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6B39B2616A87FB1009F818C /* bad_status_response.json */,
 				2732844216A604BB00350E0A /* brooklyn_to_baltimore.json */,
 				27BBB66816A0621E00EA5373 /* FindOnTheWayTests-Info.plist */,
 				27BBB66916A0621E00EA5373 /* InfoPlist.strings */,
@@ -363,6 +376,7 @@
 				27BBB66B16A0621E00EA5373 /* InfoPlist.strings in Resources */,
 				56E44D67AED7C81D5E7D5A90 /* brooklyn_to_forest_hill.json in Resources */,
 				2732844316A604BB00350E0A /* brooklyn_to_baltimore.json in Resources */,
+				D6B39B2716A87FB1009F818C /* bad_status_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +416,7 @@
 				2732841F16A5D64300350E0A /* GooglePlacesConnection.m in Sources */,
 				2732842216A5D64C00350E0A /* GooglePlacesObject.m in Sources */,
 				2732842516A5D65700350E0A /* MBProgressHUD.m in Sources */,
+				D6B39B1C16A8721E009F818C /* GoogleJSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +428,7 @@
 				27BBB6A116A0955600EA5373 /* RouteOptimizerTest.m in Sources */,
 				2732842D16A5D74300350E0A /* CumulativeRouteStepTest.m in Sources */,
 				2732843016A5D74B00350E0A /* RouteStepTest.m in Sources */,
+				D6B39B2016A8724F009F818C /* GoogleJSONParserTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
