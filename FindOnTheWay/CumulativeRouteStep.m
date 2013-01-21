@@ -56,11 +56,8 @@
             float startLat = self.startLocation.latitude;
             float startLng = self.startLocation.longitude;
 
-            BOOL latIsNegative = (startLat * -1) > 0;
-            BOOL LngIsNegative = (startLng * -1) > 0;
-
-            float distanceBetweenPointsLat = [self getDouble:numberPointsNeeded startVal:startLat valIsNegative:latIsNegative difference:[[self endLocation] latitude]];
-            float distanceBetweenPointsLng = [self getDouble:numberPointsNeeded startVal:startLng valIsNegative:LngIsNegative difference:[[self endLocation] longitude]];
+            float distanceBetweenPointsLat = [self getDouble:numberPointsNeeded startVal:startLat difference:[[self endLocation] latitude]];
+            float distanceBetweenPointsLng = [self getDouble:numberPointsNeeded startVal:startLng difference:[[self endLocation] longitude]];
 
             for (int index = 0; index < numberPointsNeeded; index++) {
                 startLat += distanceBetweenPointsLat;
@@ -76,9 +73,8 @@
 
 - (float)getDouble:(int)numberPointsNeeded
           startVal:(float)startVal
-     valIsNegative:(BOOL)valIsNegative
-        difference:(float)difference {
-    float result = valIsNegative ? (startVal + difference) : (startVal - difference);
+        difference:(float)endVal {
+    float result = endVal - startVal;
     return result / (numberPointsNeeded + 1);
 }
 @end
