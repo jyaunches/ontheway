@@ -12,6 +12,7 @@
 
 @synthesize map = _map;
 @synthesize optimizedRoute = _optimizedRoute;
+@synthesize routePointIndex = _routePointIndex;
 
 
 - (void)viewDidLoad
@@ -24,16 +25,19 @@
     NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:basicRouteSteps];
     self.optimizedRoute = [GoogleRoute initWithSteps:optimizedSteps];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    routePointIndex = 0;
-    RoutePoint *point = [[self.optimizedRoute pointsToSearchForPlaces] objectAtIndex:routePointIndex];
+    self.routePointIndex = 0;
+    RoutePoint *point = [[self.optimizedRoute pointsToSearchForPlaces] objectAtIndex:self.routePointIndex];
 
     googlePlacesConnection = [[GooglePlacesConnection alloc] initWithDelegate:self];
-    [googlePlacesConnection getGoogleObjects:point forRadius:1000];
+    [googlePlacesConnection getGoogleObjects:point forRadius:2000];
 }
 
 - (void)showHUD {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Looking for your directions!";
+}
+- (IBAction)viewNextClicked:(id)sender {
+    
 }
 
 - (void)didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects {

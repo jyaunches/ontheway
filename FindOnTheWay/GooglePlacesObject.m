@@ -83,8 +83,8 @@ distanceInFeet:(NSString *)distanceFeet
     
     //NSLog(@"Total Distance %@ in feet, distance in files %@",distanceInFeet, distanceInMiles);
 
-    NSString *name = [jsonResultDict objectForKey:@"name"];
-    return [self initWithName:name
+    NSString *placeName = [jsonResultDict objectForKey:@"name"];
+    return [self initWithName:placeName
               latitude:[[loc objectForKey:@"lat"] doubleValue] 
              longitude:[[loc objectForKey:@"lng"] doubleValue]
              placeIcon:[jsonResultDict objectForKey:@"icon"] 

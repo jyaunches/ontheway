@@ -14,11 +14,6 @@
     return route;
 }
 
-- (BasicRouteStep *)firstStep{
-    return [self.steps objectAtIndex:0];
-}
-
-
 - (NSArray *)pointsToSearchForPlaces {
     NSMutableArray *points = [NSMutableArray array];
     for (CumulativeRouteStep *step in self.steps){

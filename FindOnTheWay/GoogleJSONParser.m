@@ -42,7 +42,7 @@
         return NULL;
     }
 
-    return googlePlacesObjects;
+    return [NSArray arrayWithArray:googlePlacesObjects];
 }
 
 + (NSArray *)parseDirectionsJSON:(NSMutableData *)data {

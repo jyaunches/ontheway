@@ -10,6 +10,7 @@
 #import "RoutePoint.h"
 #import "BasicRouteStep.h"
 
+
 @implementation CumulativeRouteStep
 @synthesize steps = _steps;
 
@@ -19,21 +20,21 @@
     return cumulativeRouteStep;
 }
 
-- (RoutePoint *)startLocation{
+- (RoutePoint *)startLocation {
     return [[self.steps objectAtIndex:0] startLocation];
 }
 
-- (RoutePoint *)endLocation{
+- (RoutePoint *)endLocation {
     return [[self.steps lastObject] endLocation];
 }
 
-- (RouteStepType)routeType{
+- (RouteStepType)routeType {
     return [[self.steps objectAtIndex:0] routeType];
 }
 
-- (float)distanceInMeters{
+- (float)distanceInMeters {
     float result = 0;
-    for (BasicRouteStep *step in self.steps){
+    for (BasicRouteStep *step in self.steps) {
         result += step.distanceInMeter;
     }
     return result;
@@ -42,15 +43,42 @@
 - (NSArray *)pointsToSearchForPlaces {
     NSMutableArray *points = [NSMutableArray array];
 
-    for (BasicRouteStep *step in self.steps){
-        if(step.distanceInMeter >= HALFMILE){
-            float lat = ([[self startLocation] latitude] + [[self endLocation] latitude]) / 2;
-            float lng = ([[self startLocation] longitude] + [[self endLocation] longitude]) / 2;
 
-            RoutePoint *point = [RoutePoint initWithLatitude:lat longitude:lng];
-            [points addObject:point];
+    for (BasicRouteStep *step in self.steps) {
+        if (step.distanceInMeter >= HALFMILE) {
+
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            [formatter setMaximumFractionDigits:1];
+            [formatter setRoundingMode:NSNumberFormatterRoundDown];
+
+            int numberPointsNeeded = ceil(step.distanceInMeter / SIXMILES);
+
+            float startLat = self.startLocation.latitude;
+            float startLng = self.startLocation.longitude;
+
+            BOOL latIsNegative = (startLat * -1) > 0;
+            BOOL LngIsNegative = (startLng * -1) > 0;
+
+            float distanceBetweenPointsLat = [self getDouble:numberPointsNeeded startVal:startLat valIsNegative:latIsNegative difference:[[self endLocation] latitude]];
+            float distanceBetweenPointsLng = [self getDouble:numberPointsNeeded startVal:startLng valIsNegative:LngIsNegative difference:[[self endLocation] longitude]];
+
+            for (int index = 0; index < numberPointsNeeded; index++) {
+                startLat += distanceBetweenPointsLat;
+                startLng += distanceBetweenPointsLng;
+
+                RoutePoint *point = [RoutePoint initWithLatitude:startLat longitude:startLng];
+                [points addObject:point];
+            }
         }
     }
     return points;
+}
+
+- (float)getDouble:(int)numberPointsNeeded
+          startVal:(float)startVal
+     valIsNegative:(BOOL)valIsNegative
+        difference:(float)difference {
+    float result = valIsNegative ? (startVal + difference) : (startVal - difference);
+    return result / (numberPointsNeeded + 1);
 }
 @end

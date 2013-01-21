@@ -16,7 +16,7 @@
 
 @protocol GooglePlacesConnectionDelegate
 
-- (void)didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects;
+- (void)didFinishLoadingWithGooglePlacesObjects:(NSArray *)objects;
 - (void) noResultsFound;
 - (void) errorOccurred;
 
