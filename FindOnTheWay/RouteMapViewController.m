@@ -9,38 +9,37 @@
 @private NSUInteger routePointIndex;
 }
 
-
 @synthesize map = _map;
 @synthesize optimizedRoute = _optimizedRoute;
 @synthesize routePointIndex = _routePointIndex;
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     [self showHUD];
+    googlePlacesConnection = [[GooglePlacesConnection alloc] initWithDelegate:self];
+    self.routePointIndex = 0;
 }
 
 - (void)didFinishLoadingWithGoogleRoute:(NSArray *)basicRouteSteps {
-    NSArray *optimizedSteps = [RouteOptimizer optimizedRoutes:basicRouteSteps];
-    self.optimizedRoute = [GoogleRoute initWithSteps:optimizedSteps];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    self.routePointIndex = 0;
+    self.optimizedRoute = [GoogleRoute initWithSteps:[RouteOptimizer optimizedRoutes:basicRouteSteps]];
+    [self searchPlacesForPoint];
+}
+
+- (void)searchPlacesForPoint {
     RoutePoint *point = [[self.optimizedRoute pointsToSearchForPlaces] objectAtIndex:self.routePointIndex];
-
-    googlePlacesConnection = [[GooglePlacesConnection alloc] initWithDelegate:self];
     [googlePlacesConnection getGoogleObjects:point forRadius:2000];
+    self.routePointIndex++;
 }
 
-- (void)showHUD {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Looking for your directions!";
-}
 - (IBAction)viewNextClicked:(id)sender {
-    
+    [self showHUD];
+    [self searchPlacesForPoint];
 }
 
 - (void)didFinishLoadingWithGooglePlacesObjects:(NSMutableArray *)objects {
+    [self hideHUD];
+
     for (GooglePlacesObject *place in objects){
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(place.coordinate, 5000, 5000);
         [self.map setRegion:region animated:NO];
@@ -50,6 +49,15 @@
         annotationPoint.title = place.name;
         [self.map addAnnotation:annotationPoint];
     }
+}
+
+- (void)showHUD {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Looking for your directions!";
+}
+
+- (void)hideHUD {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void) noResultsFound{

@@ -8,5 +8,6 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *origin;
 @property (strong, nonatomic) IBOutlet UITextField *destination;
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
 
 @end
